@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Website for Alce</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="backdrop">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <header class="hero">
+    <div class="hero__inner">
+      <p class="eyebrow">Test Website for Alce</p>
+      <h1>Simple, clear sections to test the flow.</h1>
+      <p class="lede">A lightweight, single-page site with three subsections you asked for. Smooth scroll, clean layout, easy to host on GitHub Pages.</p>
+      <div class="actions">
+        <a class="btn primary" href="#first">Jump in</a>
+        <a class="btn ghost" href="#contact">Scroll down</a>
+      </div>
+      <div class="nav-dots">
+        <a href="#first" aria-label="First subsection"></a>
+        <a href="#second" aria-label="Second subsection"></a>
+        <a href="#third" aria-label="Third subsection"></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="first" class="section-card">
+      <div class="section-card__inner">
+        <p class="section-label">01</p>
+        <h2>Hello, this would be the first subsection</h2>
+        <p class="section-body">A short intro block to prove the page is wired correctly. Feel free to replace this copy or expand with images, lists, or links.</p>
+      </div>
+    </section>
+
+    <section id="second" class="section-card">
+      <div class="section-card__inner">
+        <p class="section-label">02</p>
+        <h2>Testing if this works</h2>
+        <p class="section-body">Use this section to confirm everything renders and scrolls smoothly. The layout is responsive and keeps the reading width comfortable.</p>
+      </div>
+    </section>
+
+    <section id="third" class="section-card">
+      <div class="section-card__inner">
+        <p class="section-label">03</p>
+        <h2>This can be insane</h2>
+        <p class="section-body">Dial up the content here&mdash;add code samples, embeds, or calls to action. The style system will adapt without extra tweaks.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <p>Built as a quick demo. Want more sections? Just duplicate a block above.</p>
+    <div class="footer-links">
+      <a href="#first">Top</a>
+      <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll for in-page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', evt => {
+        const targetId = anchor.getAttribute('href');
+        const target = document.querySelector(targetId);
+        if (target) {
+          evt.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
